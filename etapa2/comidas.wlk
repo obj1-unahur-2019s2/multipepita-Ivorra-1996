@@ -1,4 +1,4 @@
-
+import pepita.*
 object alpiste {
 	method energiaPorGramo() { return 4 }
 }
@@ -29,7 +29,16 @@ object sorgo {
 // despues, agregar mijo y canelones
 
 object mijo {
-	method mojarse(){}
-	method secarse(){}
-	method energiaPorGramo() {}
+	var estadoDelMijo = true
+	method mojarse(){estadoDelMijo = true}
+	method secarse(){estadoDelMijo = false}
+	method energiaPorGramo(){
+		if(estadoDelMijo){return 15}
+		else{return 20}
+	}
+}
+
+object canelones{
+	/*lo  preactico en casa */
+		
 }
